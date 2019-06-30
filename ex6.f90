@@ -1,4 +1,6 @@
 !Logical Relations and Comparisons
+!While briefly seen before in the quadratic equation solver, we now exhaustively
+!examine boolean operations in Fortran
 program ex6
   implicit none
 
@@ -22,6 +24,4 @@ program ex6
   write(*,*) .not. .false.
   write(*,*) .true. .eqv. .true.
   write(*,*) .true. .neqv. .true.
-
-
 end program
