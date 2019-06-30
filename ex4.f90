@@ -3,6 +3,8 @@
 
 program ex4
   implicit none
+  !The following parameters designate single, double, and quadruple precision
+  !respectively
   integer, parameter ::&
     sp = kind(1.0), &
     dp = selected_real_kind( 2* precision(1.0_sp)  ), &
