@@ -46,6 +46,4 @@ program ex9
     x = x /2.0
   end do while1
   write(*,*) "The machine precision is ", 2*x, epsilon(x)
-
-
 end program
