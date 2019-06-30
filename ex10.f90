@@ -1,24 +1,30 @@
 !Arrays
+!In this program, I demonstrate some basic array operations
 program ex10
   implicit none
   !Two ways of declaring an array
+  character(len=*), parameter :: fmt = '(8F10.2)'
   integer,dimension(6) :: a
   real, dimension(0:9) :: b
-  logical, dimension(2,2) :: yes_no
 
-  integer, dimension(8) :: x, z(16)
+  real, dimension(8) :: x, z(9)
   real :: alpha(1:3), beta(4:9)
   real, dimension(0:5,12:45,6) :: data
   character(len=10) :: names(25)
 
-  real ::  y(9)
+  real ::  y(8)
   integer :: i
 
-  !
-  ! y = 1.0
-  ! x = 5*y + 1
-  ! write(*,*) x,y
-  !Fortran indexes starting from 1. We can assign values easily with loops
+  !Assigning numbers to arrays
+  z(1:4) = 0.0
+  z(5:9) = 1.0
+
+   y = 1.0
+   x = 5.0*y + z(1:8)
+
+   write(*,fmt) x
+   write(*,fmt) y
+   write(*,fmt) z(:8)
 
   do i =1,size(y)
     y(i) = (i-1)/real(size(y))
