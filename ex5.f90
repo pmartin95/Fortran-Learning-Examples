@@ -1,4 +1,5 @@
 !Derived Types
+!In this example program, I demonstrate how to make an use data types
 
 program ex5
   use, intrinsic :: iso_fortran_env
@@ -13,13 +14,10 @@ program ex5
   end type coordinates
 
 
-
-
-
   type(book) :: novel1
   type(coordinates) :: particle1, particle2
 
-
+  !This is how you can call a specific item from a datatype
   novel1%title = "Lessons in Fortran"
   novel1%author = "Paul Martin"
   novel1%subject = "Programming"
@@ -34,4 +32,8 @@ program ex5
 
   write(*,*) particle2, particle1
   write(*,*) novel1
+
+  !You can also assign equivalent datatypes to each other, ie
+  particle1 = particle2
+  write(*,*) particle1, particle2
 end program
