@@ -26,8 +26,11 @@ program ex7
   main: if(x<0.0) then
     write(*,*) "x is negative"
   else main
-    if(x < epsilon(x)) write(*,*) "x is basically 0.0"
-    write(*,*) "x is non-negative"
+    if(x < epsilon(x))  then
+      write(*,*) "x is basically 0.0"
+    else
+      write(*,*) "x is non-negative"
+    end if
   end if main
 
 end program
