@@ -33,13 +33,12 @@ contains
 end module
 
 
-
 program ex13
   use examplemod
   use, intrinsic :: iso_fortran_env
   implicit none
 
-  
+
   interface
     subroutine external_sub()
     end subroutine
@@ -56,6 +55,7 @@ program ex13
   end do
   write(*,*) tot
   call Timer()
+
 contains
   !An example of an internal function
   function f(x)
@@ -64,8 +64,6 @@ contains
     f = 5.0*x + 1
   end function
 end program
-
-
 
 
 !Example of an external subroutine
