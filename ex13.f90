@@ -36,13 +36,22 @@ end module
 
 program ex13
   use examplemod
+  use, intrinsic :: iso_fortran_env
   implicit none
-  integer :: i, tot = 0
+
+  
+  interface
+    subroutine external_sub()
+    end subroutine
+  end interface
+
+
+  integer(kind=INT64) :: i, tot = 0
   call Timer()
   call external_sub()
   write(*,*) f(2.0)
   call PrintAPhrase("Where does this subroutine come from?")
-  do i =1,10000000
+  do i =1,1000000000
     tot = tot + i
   end do
   write(*,*) tot
