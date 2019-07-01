@@ -6,14 +6,14 @@ program ex10
   character(len=*), parameter :: fmt = '(8F10.2)'
   integer,dimension(6) :: a
   real, dimension(0:9) :: b
-
+  integer :: i
   real, dimension(8) :: x, z(9)
   real :: alpha(1:3), beta(4:9)
   real, dimension(0:5,12:45,6) :: data
   character(len=10) :: names(25)
 
   real ::  y(8)
-  integer :: i
+
 
   !Assigning numbers to arrays
   z(1:4) = 0.0
@@ -21,7 +21,6 @@ program ex10
 
    y = 1.0
    x = 5.0*y + z(1:8)
-
    write(*,fmt) x
    write(*,fmt) y
    write(*,fmt) z(:8)
